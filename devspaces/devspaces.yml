@@ -1,0 +1,21 @@
+--- # devspaces.yml
+name: sqlitebrowser
+description:  Development environment for SQLiteBrowser
+
+# If you want to use a different Dockerfile for your DevSpace, provide the path
+# here.
+docker-file: docker/Dockerfile
+
+# If you need additional files when building your Dockerfile, such as some
+# application binaries that your Dockerfile references, list the glob paths to
+# include here. They are relative to this devspaces.yml file.
+docker-build-includes: |
+  **/*
+    
+sync-ignore: |
+  .idea
+  **/node_modules
+  **/build
+  **/out
+  .DS_Store
+  .data
