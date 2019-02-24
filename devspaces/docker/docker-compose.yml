@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  builder:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: sqlitebrowser
+    volumes:
+      - ../../:/data:Z
+    command: bash
+    tty: true
